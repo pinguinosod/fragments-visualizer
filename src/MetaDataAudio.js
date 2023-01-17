@@ -31,16 +31,16 @@ function MetaDataAudio({ attributes }) {
     updateOscillators(attributes, audioCtx, oscillators);
   }, [attributes, audioCtx, oscillators]);
 
-  const displayFrequencies = () => {
+  const displayNumericValues = () => {
     return attributes.filter(attribute => attribute.trait_type.startsWith('Face#')).map((attribute, index) => {
-      const frequencyValue = attribute.value * 30;
-      return <span key={attribute.trait_type}>{index !== 0 ? ', ': ''} {frequencyValue}</span>;
+      return <span key={attribute.trait_type}>{index !== 0 ? ', ': ''} {attribute.value}</span>;
     });
   };
 
   return (
     <div>
-      Frequencies: {displayFrequencies()}
+      <p>Based on the numeric value of each face, reproduces a sound on a corresponding frequency.</p>
+      <p>Values: {displayNumericValues()}</p>
       <audio ref={audioRef} />
     </div>
   );
