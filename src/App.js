@@ -2,6 +2,7 @@ import { ethers } from 'ethers';
 import { useState } from 'react';
 import FRAGMENTS_ABI from "./ABI.json";
 import MetaDataAudio from "./MetaDataAudio"
+import "./app.css";
 
 const FRAGMENTS_ADDRESS = '0xdEA65Dd08eB6d51fb23038322376897C54668964';
 const ETHEREUM_MAINNET_CHAIN_ID = 1;
@@ -42,7 +43,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="app">
       Token ID: <input
         type="number"
         placeholder="Enter tokenId"
