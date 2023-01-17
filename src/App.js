@@ -1,6 +1,5 @@
-import './App.css';
 import { ethers } from 'ethers';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import FRAGMENTS_ABI from "./ABI.json";
 import MetaDataAudio from "./MetaDataAudio"
 
