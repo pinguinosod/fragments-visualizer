@@ -12,7 +12,7 @@ const ETHEREUM_MAINNET_CHAIN_ID = 1;
 function App() {
   const [metaData, setMetaData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [tokenId, setTokenId] = useState('57');
+  const [tokenId, setTokenId] = useState('180');
   const [isError, setIsError] = useState(false);
 
   const getNFTMetaData = async () => {
